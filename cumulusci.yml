@@ -30,6 +30,13 @@ tasks:
               - cumulusci/robotframework/Salesforce.robot
               - cumulusci/robotframework/pageobjects/BasePageObjects.py
 
+    integration_tests:
+        description: Run Python Task tests against an org
+        class_path: cumulusci.tasks.integration_test.IntegrationTest
+        group: Cumulus CI Development
+        options:
+            tests: tests/integration/
+
 flows:
     robot_docs:
         description: Generates documentation for robot framework libraries
